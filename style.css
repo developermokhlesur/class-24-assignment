@@ -187,6 +187,7 @@ img{
 }
 .card-title h3{
     font-size: 20px;
+    transition: 0.5s;
 }
 .card-icon span{
     position: relative;
@@ -199,6 +200,7 @@ img{
     height: 3px;
     width: 50%;
     background: blue;
+    transition: 0.5s;
 }
 .card-icon span {
     display: inline-block;
@@ -211,13 +213,109 @@ img{
     font-size: 23px;
     border-radius: 30px 30px 30px 0;
     margin: 17px 0;
+    transition: 0.5s;
 }
 .card-text p {
     font-size: 15px;
     color: #606060;
     margin: 10px 0;
+    transition: 0.5s;
 }
 .card{
     background: #f9fcff;
+    transition: 0.5s;
 }
+.card:hover{
+    background: blue;
+}
+.card:hover .card-title h3{
+    color: #fff;
+}
+.card:hover .card-icon span{
+    background: #fff;
+    color: blue;
+}
+.card:hover .card-icon span::after{
+    background: #fff;
+    transform: scale(1.2);
+}
+.card:hover .card-text p{
+    color: #fff;
+}
+
 /*** Service Section End ***/
+/*** Content Section Start ***/
+.content{
+    background:linear-gradient(rgba(46,63,158,0.500), rgba(46,63,158,0.500)), url(./img/video-bg.jpg) no-repeat top center;
+    background-size: cover;
+    height: 110vh;
+    width: 100%;
+    background-attachment: fixed;
+    
+}
+.content-text {
+    margin-top: 60px;
+}
+.content-text h4 {
+    font-size: 14px;
+    text-transform: uppercase;
+    margin: 15px 0;
+}
+.content-text h2 {
+    font-size: 29px;
+    margin-bottom: 29px;
+}
+.content-text p {
+    width: 50%;
+    margin: 0 auto;
+    line-height: 1.4;
+    margin-bottom: 100px;
+}
+.play-btn span {
+    display: inline-block;
+    color: blue;
+    background: #fff;
+    height: 70px;
+    width: 70px;
+    text-align: center;
+    line-height: 70px;
+    font-size: 35px;
+    border-radius: 50%;
+    margin-bottom: 34px;
+    position: relative;
+}
+.play-btn span::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    height: 90px;
+    line-height: 90px;
+    width: 90px;
+    border: 1px solid rgb(252, 251, 251);
+    border-radius: 50%;
+    animation: animation 2s ease-in-out infinite;
+}
+.play-btn span::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    height: 80px;
+    line-height: 90px;
+    width: 80px;
+    border: 1px solid rgb(252, 248, 248);
+    border-radius: 50%;
+    animation: animation 2s ease-in-out infinite;
+}
+@keyframes animation{
+    from{
+        transform: scale(1);
+        opacity: 1;
+    }
+    to{
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+/*** Content Section End ***/
